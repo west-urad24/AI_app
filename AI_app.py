@@ -7,7 +7,7 @@ import sklearn.svm
 import numpy as np
 
 def imageToData(filename):
-    grayImage = PIL.Image.open(filename).convert("L")
+    grayImage = PIL.Image.open(filename).convert("L")#白黒にする
     grayImage = grayImage.resize((8, 8), PIL.Image.ANTIALIAS)
 
     dispImage = PIL.ImageTk.PhotoImage(grayImage.resize((300,300),resample = 0))
